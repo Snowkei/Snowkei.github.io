@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>常无鱼以观其喵 · Snowkei</title>
+<meta name="description" content="Snowkei —— 在 NAS 上跑 AI、写插件、做自托管的前端工程师。">
+<meta name="author" content="Snowkei">
+<meta property="og:title" content="常无鱼以观其喵 · Snowkei">
+<meta property="og:description" content="在 NAS 上跑 AI、写插件、做自托管的前端工程师。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0e13">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      var sys = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.dataset.theme = t || sys;
+      var l = localStorage.getItem('lang');
+      if (l) document.documentElement.lang = l === 'en' ? 'en' : 'zh-CN';
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="回到顶部">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="none" stroke="currentColor" stroke-opacity=".35"/>
+      <path d="M9 11.5 13.5 16 9 20.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M16 20.5h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <span class="brand-name">snowkei</span>
+  </a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="#about" data-en="About">关于</a>
+    <a href="#stack" data-en="Stack">技术栈</a>
+    <a href="#now" data-en="Now">现在</a>
+    <a href="#contact" data-en="Contact">联系</a>
+  </nav>
+  <div class="nav-tools">
+    <button class="icon-btn" id="langBtn" type="button" aria-label="切换语言 / Switch language" title="中文 / English">
+      <span id="langLabel">EN</span>
+    </button>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="切换主题 / Toggle theme" title="深浅色">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path class="sun" d="M12 4v2m0 12v2m8-8h-2M6 12H4m12.7-4.7-1.4 1.4M8.7 15.3l-1.4 1.4m0-9.4 1.4 1.4m6.6 6.6 1.4 1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle class="sun" cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path class="moon" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span> <span data-en="Hello, I am">你好，我是</span></p>
+      <h1 class="name">常无鱼以观其喵</h1>
+      <p class="role">
+        <span data-en="Frontend engineer · self-hosting enthusiast">前端工程师 · 自托管爱好者</span>
+      </p>
+      <p class="lede" data-en="I run AI on a home NAS, write plugins, and move one cloud service at a time back into my own house. Frontend by day; Docker, tunnels and voice models by night.">
+        在一台飞牛 NAS 上跑 AI、写插件，把云服务一个个搬回自己家。白天做前端，晚上和 Docker、隧道、语音模型打交道。
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="https://github.com/Snowkei" target="_blank" rel="noopener">
+          GitHub <span class="arrow">↗</span>
+        </a>
+        <a class="btn ghost" href="#now" data-en="What I am doing">最近在做什么</a>
+      </div>
+    </div>
+
+    <div class="term" aria-hidden="true">
+      <div class="term-bar">
+        <span class="tl"><i></i><i></i><i></i></span>
+        <span class="term-title">snowkei@nas — ~</span>
+      </div>
+      <pre class="term-body"><code><span class="prompt">~ $</span> whoami
+常无鱼以观其喵 · frontend engineer
+
+<span class="prompt">~ $</span> uptime
+up 100 days · 3 services running · 9.8G / 100G
+
+<span class="prompt">~ $</span> cat stack.txt
+python  typescript  vue  docker  cloudflare
+<span class="prompt">~ $</span> <span class="cursor">▌</span></code></pre>
+    </div>
+  </section>
+
+  <!-- 01 About -->
+  <section class="section wrap" id="about">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 data-en="About">关于</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="two-col">
+      <div class="prose">
+        <p data-en="I have been writing frontend for years, and I care about the unglamorous parts: stable layout, restrained motion, fast loads, code that the next person can read.">
+          写前端有些年头了，在意的是那些不显眼的部分：布局要稳、动效要克制、加载要快，代码要让下一个人看得懂。
+        </p>
+        <p data-en="Lately my attention has moved to making models actually do things — agent tooling, MCP, speech synthesis. The NAS at home runs a few small services I wrote: an audio library, a speech pipeline, bridges for a couple of chat bots.">
+          近几年把兴趣挪到了「让模型真正动手」——Agent 工具链、MCP、语音合成。家里的 NAS 常年跑着几个自己写的小服务：一个音声库、一条语音管线、几个社区机器人的桥。
+        </p>
+        <p data-en="I believe good tools work quietly: private when possible, automated when repeatable.">
+          相信工具应该安静地工作：能私有就私有，能自动化就别手动。
+        </p>
+      </div>
+      <dl class="facts">
+        <div><dt data-en="Location">坐标</dt><dd data-en="Somewhere in China">中国 · 某处</dd></div>
+        <div><dt data-en="Focus">关注</dt><dd data-en="Agent tooling · TTS · self-hosting">Agent 工具链 · TTS · 自托管</dd></div>
+        <div><dt data-en="Daily drivers">常用</dt><dd>TypeScript · Python · Vue · Linux</dd></div>
+        <div><dt data-en="Learning">在学</dt><dd>Rust · MCP</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 02 Stack -->
+  <section class="section wrap" id="stack">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 data-en="Stack">技术栈</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-col">
+        <h3 data-en="Languages">语言</h3>
+        <ul class="chips">
+          <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>Vue</li><li>Astro</li><li>Go</li><li>Rust</li><li>Shell</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h3 data-en="AI &amp; Speech">AI 与语音</h3>
+        <ul class="chips">
+          <li>LLM</li><li>MCP</li><li>Agent</li><li>GPT-SoVITS</li><li>Edge TTS</li><li>ONNX</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h3 data-en="Infrastructure">部署与网络</h3>
+        <ul class="chips">
+          <li>Docker</li><li>Linux</li><li>NAS</li><li>Cloudflare Tunnel</li><li>mihomo</li><li>systemd</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h3 data-en="Platforms">平台</h3>
+        <ul class="chips">
+          <li>Android</li><li>macOS</li><li>Windows</li><li>iOS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Now -->
+  <section class="section wrap" id="now">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 data-en="Now">现在</h2>
+      <span class="rule"></span>
+    </div>
+    <ul class="timeline">
+      <li>
+        <span class="when">2026</span>
+        <div>
+          <h3 data-en="A local voice pipeline">本地语音管线</h3>
+          <p data-en="Zero-shot voice cloning with GPT-SoVITS, Edge TTS as the fast fallback, an OpenAI-compatible layer in front so any client can use it. Runs on CPU, about five seconds per sentence.">
+            用 GPT-SoVITS 做零样本音色克隆，Edge TTS 兜底快路径，前面套一层 OpenAI 兼容接口，任何客户端都能接。纯 CPU，一句约五秒。
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2026</span>
+        <div>
+          <h3 data-en="Plugins for DeepSeek Harness">DSH 插件</h3>
+          <p data-en="Connecting QQ and Bilibili, giving the assistant memory, personality and a voice. Most of the work is making chat platforms behave.">
+            把 QQ 和 B 站接进来，给助手记忆、人格和声音。大部分时间花在跟聊天平台讲道理。
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2025</span>
+        <div>
+          <h3 data-en="Self-hosting, one service at a time">自托管，一个服务一个服务地搬</h3>
+          <p data-en="Tunnels, proxies, media tools, small Node services behind a single domain. If it can live at home, it probably should.">
+            隧道、代理、媒体工具、一堆 Node 小服务，收在同一个域名后面。能住在家里，就别住外面。
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 04 Contact -->
+  <section class="section wrap" id="contact">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 data-en="Contact">联系</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="contact">
+      <p class="contact-lede" data-en="Happy to talk about NAS, self-hosting, speech synthesis, or frontend details nobody else wants to think about.">
+        想聊 NAS、自托管、语音合成，或者那些没人愿意细想的前端细节，都欢迎。
+      </p>
+      <div class="contact-links">
+        <a class="btn primary" href="https://github.com/Snowkei" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
+        <a class="btn ghost" href="https://github.com/Snowkei/Snowkei/issues" target="_blank" rel="noopener"><span data-en="Leave a note">留言</span> <span class="arrow">↗</span></a>
+      </div>
+      <nav class="links-row" aria-label="GitHub 链接">
+        <a href="https://github.com/Snowkei?tab=repositories" target="_blank" rel="noopener">repositories <span class="arrow">↗</span></a>
+        <a href="https://github.com/Snowkei?tab=stars" target="_blank" rel="noopener">starred <span class="arrow">↗</span></a>
+        <a href="https://github.com/Snowkei?tab=followers" target="_blank" rel="noopener">followers <span class="arrow">↗</span></a>
+      </nav>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer wrap">
+  <span>© <span id="year">2026</span> Snowkei</span>
+  <span class="sep">·</span>
+  <span data-en="Hand-written HTML, CSS and a little JavaScript.">纯手写 HTML / CSS / 一点点 JavaScript</span>
+  <span class="sep">·</span>
+  <span data-en="No trackers.">没有追踪</span>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
